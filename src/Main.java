@@ -5,38 +5,25 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<String> a = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("5");
         a.add(scanner.next());
-        System.out.println("4");
         a.add(scanner.next());
-        System.out.println("3");
         a.add(scanner.next());
-        System.out.println("2");
         a.add(scanner.next());
-        System.out.println("1");
         a.add(scanner.next());
-        System.out.println("0");
         System.out.println("Распечатай коллекцию А");
         Iterator iterator = a.iterator();
         while (iterator.hasNext()) {
             Object d = iterator.next();
-            System.out.println(d );
+            System.out.println(d);
 
         }
         ArrayList<String> b = new ArrayList<>();
-
         b.add(scanner.next());
-
         b.add(scanner.next());
-
         b.add(scanner.next());
-
         b.add(scanner.next());
-
         b.add(scanner.next());
-
         System.out.println("Распечатай коллекцию B ");
-
         Collections.sort(b);
         Collections.reverse(b);
         Iterator iterator1 = b.iterator();
@@ -46,8 +33,18 @@ public class Main {
         }
 
 
+
         ArrayList<String> c = new ArrayList<>();
-        c.add(0, a.get(0));
+
+        for (int i = 0; i < a.size(); i++) {
+            c.add(a.get(i));
+            c.add(b.get(i));
+
+        }
+
+
+
+        /*c.add(0, a.get(0));
         c.add(1, b.get(0));
         c.add(2, a.get(1));
         c.add(3, b.get(1));
@@ -56,10 +53,9 @@ public class Main {
         c.add(6, a.get(3));
         c.add(7, b.get(3));
         c.add(8, a.get(4));
-        c.add(9, b.get(4));
+        c.add(9, b.get(4));*/
 
-
-        System.out.println("Распечатай коллекцию С");
+        System.out.println("______________________");
         Iterator iterator2 = c.iterator();
         while (iterator2.hasNext()) {
             Object o = iterator2.next();
@@ -80,9 +76,8 @@ public class Main {
 
 
     }
-
-
 }
+
 
 
 
